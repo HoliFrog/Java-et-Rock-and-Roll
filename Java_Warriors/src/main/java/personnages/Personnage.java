@@ -38,22 +38,23 @@ public abstract class Personnage {
         return atkLevel;
     }
 
-    public void affichePerso()
-    {
+    // public void affichePerso() {
 
-        System.out.println("Nom de votre perso : -"+getNom()+
-        "\n Tu veux ma Photo : ->"+getImage()+
-        "\nNiveau de vie : ->"+getLifeLevel()+
-        "\nForce : ->"+getAtkLevel());
-        // System.out.println("-"+getNom());
-        // System.out.println("Tu veux ma Photo : ");       
-        // System.out.println("->"+getImage());
-        // System.out.println("Niveau de vie : ");
-        // System.out.println("->"+getLifeLevel());
-        // System.out.println("Force : ");
-        // System.out.println("->"+getAtkLevel());
-        
+    //     System.out.println(this.toString());
+    //     // System.out.println("-"+getNom());
+    //     // System.out.println("Tu veux ma Photo : ");       
+    //     // System.out.println("->"+getImage());
+    //     // System.out.println("Niveau de vie : ");
+    //     // System.out.println("->"+getLifeLevel());
+    //     // System.out.println("Force : ");
+    //     // System.out.println("->"+getAtkLevel());
 
+    // }
 
+    public String toString() {
+        return "Nom de votre perso : -" + getNom() +
+        "\n Tu veux ma Photo : ->" + getImage() +
+        "\nNiveau de vie : ->"+ getLifeLevel() +
+        "\nForce : ->" + getAtkLevel();
     }
 }

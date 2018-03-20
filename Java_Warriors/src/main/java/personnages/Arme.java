@@ -1,41 +1,41 @@
 package personnages;
-public class Arme {
-    private String weaponName = "";
-    private int weaponAtk = 0;
 
-	public String getWeaponname()
-	{
-		return this.weaponName;
+public class Arme extends DeviceToKill {
+	private String typeOfWeapon;
+
+	public String getTypeofweapon() {
+		return this.typeOfWeapon;
 	}
 
-	public void setWeaponname(String weaponName)
-	{
-		this.weaponName = weaponName;
+	public void setTypeofweapon(String typeOfWeapon) {
+		this.typeOfWeapon = typeOfWeapon;
 	}
 
-	public int getWeaponatk()
-	{
-		return this.weaponAtk;
+	public Arme(String arme, String weaponName, int weaponAtk,String typeOfW) {
+		this.setDevicetype(arme);
+		this.setTypeofweapon(typeOfW);
+		this.setDevicename(weaponName);
+		this.setDeviceatk(weaponAtk);
 	}
-
-	public void setWeaponatk(int weaponAtk)
-	{
-		this.weaponAtk = weaponAtk;
+	public String toString(){
+		return super.toString()+ "Type d'arme "+getDevicetype()+" : "+getTypeofweapon();
 	}
-
-
-    public void afficheArme()
-    {
-		System.out.println("Nom de son Arme-"+getWeaponname()+
-		"\nPuissance de l'arme : "+"->"+getWeaponatk());
-        // System.out.println("-"+getWeaponname());
-        // System.out.println("Puissance de l'arme");
-        // System.out.println("->"+getWeaponatk());
-    }
-
-    public Arme(String nom, int atk){
-        this.setWeaponname(nom);
-        this.setWeaponatk(atk);
-
-    }
 }
+
+// 	private String typeOfWeapon;
+
+// 	public String getTypeofweapon() {
+// 		return this.typeOfWeapon;
+// 	}
+
+// 	public void setTypeofweapon(String typeOfWeapon) {
+// 		this.typeOfWeapon = typeOfWeapon;
+// 	}
+
+// 	public Arme(String sortName, int sortAtk, String typeOfW) {
+// 		this.setDevicename(sortName);
+// 		this.setDeviceatk(sortAtk);
+// 		this.setTypeofweapon(typeOfW);
+
+// 	}
+// 
