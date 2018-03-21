@@ -12,6 +12,10 @@ public class Magicien extends Personnage {
         return mySpell;
     }
 
+    protected String getTypePerso(){
+        return "Magicien";
+    }
+
     public Magicien(String nom, String image, int lifeLevel, int atkLevel, Sort monSort) {
         this.setNom(nom);
         this.setImage(image);
@@ -22,7 +26,8 @@ public class Magicien extends Personnage {
     }
 
     public String toString() {
-        return "Vous avez choisi un Magicien\n"
-        + super.toString() + "\n" + mySpell.toString();
+        return "Vous avez choisi un "+ getTypePerso() +" \n"
+        + super.toString() + "\n" 
+        + mySpell.toString();
     }
 }

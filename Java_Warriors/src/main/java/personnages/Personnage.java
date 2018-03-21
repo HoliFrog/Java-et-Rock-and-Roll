@@ -1,10 +1,13 @@
 package personnages;
 
+import java.util.*;
+
 public abstract class Personnage {
     private String nom;
     private String image;
     private int lifeLevel;
     private int atkLevel;
+    protected abstract String getTypePerso();
 
     public void setNom(String Nom) {
         this.nom = Nom;
@@ -37,6 +40,23 @@ public abstract class Personnage {
     public int getAtkLevel() {
         return atkLevel;
     }
+    public static void createPerso(){
+        Scanner sc1 = new Scanner(System.in);
+            System.out.println("Saisissez la catégorie de votre perso :1- Guerrier, 2- Magicien ");
+            int choice = sc1.nextInt();
+            sc1.nextLine();
+            System.out.println("Saisissez le nom de votre perso : ");
+            String nom = sc1.nextLine();
+
+            System.out.println("Votre Photo : ");
+            String image = sc1.nextLine();
+
+            System.out.println("Niveau de vie : ");
+            int i = sc1.nextInt();
+
+            System.out.println("Votre force: ");
+            int j = sc1.nextInt();
+    }
 
     // public void affichePerso() {
 
@@ -52,9 +72,9 @@ public abstract class Personnage {
     // }
 
     public String toString() {
-        return "Nom de votre perso : -" + getNom() +
-        "\n Tu veux ma Photo : ->" + getImage() +
-        "\nNiveau de vie : ->"+ getLifeLevel() +
-        "\nForce : ->" + getAtkLevel();
+        return "Nom de votre "+ getTypePerso() +" :  " + getNom() +
+        "\nTu veux ma Photo :  " + getImage() +
+        "\nNiveau de vie :  "+ getLifeLevel() +
+        "\nForce :  " + getAtkLevel();
     }
 }

@@ -1,4 +1,8 @@
+personnages\Main.class
+personnages\DeviceToKill.class
+personnages\Guerrier.class
 personnages\Personnage.class
 personnages\Arme.class
 personnages\Magicien.class
+personnages\PersonnageFactory.class
 personnages\Sort.class

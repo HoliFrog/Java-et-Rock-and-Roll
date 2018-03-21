@@ -38,8 +38,8 @@ public abstract class DeviceToKill {
 	}
 	public String toString(){
 		return "Dispositif d'attaque : "+ getDevicetype()+
-		"\n Nom de votre "+getDevicetype()+" : ->" +getDevicename()+
-		"\n Niveau d'atk : ->"+getDeviceatk();
+		"\nNom de votre "+getDevicetype()+" :  " +getDevicename()+
+		"\nNiveau d'atk :  "+getDeviceatk()+"\n";
         
 	}
 }

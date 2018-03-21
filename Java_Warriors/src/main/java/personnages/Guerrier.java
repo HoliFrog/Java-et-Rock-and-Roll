@@ -12,6 +12,10 @@ public class Guerrier extends Personnage {
         return myWeapon;
     }
 
+    protected String getTypePerso(){
+        return "Guerrier";
+    }
+
     public Guerrier(String nom, String image, int lifeLevel, int atkLevel, Arme monArme) {
         this.setNom(nom);
         this.setImage(image);
@@ -27,7 +31,7 @@ public class Guerrier extends Personnage {
     // }
 
     public String toString() {
-        return "Vous avez choisi un Guerrier \n"
+        return "Vous avez choisi un "+ getTypePerso() +" \n"
         + super.toString()+ "\n"
         +myWeapon.toString();
     }
