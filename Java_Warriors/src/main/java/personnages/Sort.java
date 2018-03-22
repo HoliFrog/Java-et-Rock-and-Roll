@@ -2,6 +2,7 @@ package personnages;
 
 public class Sort extends DeviceToKill {
 	private String element;
+	public static int compteur = 0;
 
 	public String getElement()
 	{
@@ -14,10 +15,12 @@ public class Sort extends DeviceToKill {
 	}
 
 	public Sort(String sort, String sortName, int sortAtk, String associateElement) {
+		compteur++;
 		this.setDevicetype(sort);
 		this.setDevicename(sortName);
 		this.setDeviceatk(sortAtk);
 		this.setElement(associateElement);
+		this.setDevicenumber(compteur);
 
 	}
 	public String toString(){

@@ -1,27 +1,29 @@
 package personnages;
+import java.util.*;
 
 public class Guerrier extends Personnage {
 
-    Arme myWeapon;
+    ArrayList<Arme> myWeapons;
 
-    public void setMyWeapon(Arme myWeapon) {
-        this.myWeapon = myWeapon;
+    public void setMyWeapons(ArrayList<Arme> myWeapons) {
+        this.myWeapons = myWeapons;
     }
 
-    public Arme getMyWeapon() {
-        return myWeapon;
+    public ArrayList<Arme> getMyWeapons() {
+        return myWeapons;
     }
 
     protected String getTypePerso(){
         return "Guerrier";
     }
 
-    public Guerrier(String nom, String image, int lifeLevel, int atkLevel, Arme monArme) {
+    /** TOTO */
+    public Guerrier(String nom, String image, int lifeLevel, int atkLevel, ArrayList<Arme> mesArmes) {
         this.setNom(nom);
         this.setImage(image);
         this.setLifeLevel(lifeLevel);
         this.setAtkLevel(atkLevel);
-        this.setMyWeapon(monArme);
+        this.setMyWeapons(mesArmes);
 
     }
 
@@ -33,6 +35,6 @@ public class Guerrier extends Personnage {
     public String toString() {
         return "Vous avez choisi un "+ getTypePerso() +" \n"
         + super.toString()+ "\n"
-        +myWeapon.toString();
+        +myWeapons.toString();
     }
 }

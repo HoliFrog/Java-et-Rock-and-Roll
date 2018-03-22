@@ -4,8 +4,19 @@ public abstract class DeviceToKill {
 
     private String deviceName;
     private int deviceAtk;
-    private String deviceType;
+	private String deviceType;
+	private int deviceNumber;
 
+	public int getDevicenumber()
+	{
+		return this.deviceNumber;
+	}
+
+	public void setDevicenumber(int deviceNumber)
+	{
+		this.deviceNumber = deviceNumber;
+	}
+	
 	public String getDevicetype()
 	{
 		return this.deviceType;
@@ -38,6 +49,7 @@ public abstract class DeviceToKill {
 	}
 	public String toString(){
 		return "Dispositif d'attaque : "+ getDevicetype()+
+		"\n"+ getDevicetype()+" n° "+getDevicenumber()+
 		"\nNom de votre "+getDevicetype()+" :  " +getDevicename()+
 		"\nNiveau d'atk :  "+getDeviceatk()+"\n";
         

@@ -1,6 +1,6 @@
 package personnages;
 
-import java.util.*;
+
 
 public abstract class Personnage {
     private String nom;
@@ -40,37 +40,7 @@ public abstract class Personnage {
     public int getAtkLevel() {
         return atkLevel;
     }
-    public static void createPerso(){
-        Scanner sc1 = new Scanner(System.in);
-            System.out.println("Saisissez la catégorie de votre perso :1- Guerrier, 2- Magicien ");
-            int choice = sc1.nextInt();
-            sc1.nextLine();
-            System.out.println("Saisissez le nom de votre perso : ");
-            String nom = sc1.nextLine();
-
-            System.out.println("Votre Photo : ");
-            String image = sc1.nextLine();
-
-            System.out.println("Niveau de vie : ");
-            int i = sc1.nextInt();
-
-            System.out.println("Votre force: ");
-            int j = sc1.nextInt();
-    }
-
-    // public void affichePerso() {
-
-    //     System.out.println(this.toString());
-    //     // System.out.println("-"+getNom());
-    //     // System.out.println("Tu veux ma Photo : ");       
-    //     // System.out.println("->"+getImage());
-    //     // System.out.println("Niveau de vie : ");
-    //     // System.out.println("->"+getLifeLevel());
-    //     // System.out.println("Force : ");
-    //     // System.out.println("->"+getAtkLevel());
-
-    // }
-
+    
     public String toString() {
         return "Nom de votre "+ getTypePerso() +" :  " + getNom() +
         "\nTu veux ma Photo :  " + getImage() +
@@ -78,3 +48,33 @@ public abstract class Personnage {
         "\nForce :  " + getAtkLevel();
     }
 }
+                                // public static void createPerso(){
+                                //     Scanner sc1 = new Scanner(System.in);
+                                //         System.out.println("Saisissez la catégorie de votre perso :1- Guerrier, 2- Magicien ");
+                                //         int choice = sc1.nextInt();
+                                //         sc1.nextLine();
+                                //         System.out.println("Saisissez le nom de votre perso : ");
+                                //         String nom = sc1.nextLine();
+                            
+                                //         System.out.println("Votre Photo : ");
+                                //         String image = sc1.nextLine();
+                            
+                                //         System.out.println("Niveau de vie : ");
+                                //         int i = sc1.nextInt();
+                            
+                                //         System.out.println("Votre force: ");
+                                //         int j = sc1.nextInt();
+                                // }
+                            
+                                // public void affichePerso() {
+                            
+                                //     System.out.println(this.toString());
+                                //     // System.out.println("-"+getNom());
+                                //     // System.out.println("Tu veux ma Photo : ");       
+                                //     // System.out.println("->"+getImage());
+                                //     // System.out.println("Niveau de vie : ");
+                                //     // System.out.println("->"+getLifeLevel());
+                                //     // System.out.println("Force : ");
+                                //     // System.out.println("->"+getAtkLevel());
+                            
+                                // }

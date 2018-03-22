@@ -1,6 +1,7 @@
 package livrables;
 public class main{
     public static void main(String[]args){
+        Test.entier();
         
 Animal[] tab ={
         new Human("multicolor en fonction des émotions", "John"),
