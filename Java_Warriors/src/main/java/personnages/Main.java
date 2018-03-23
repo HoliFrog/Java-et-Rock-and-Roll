@@ -11,48 +11,27 @@ public class Main {
 
         String userChoice;
 
-        int choix = TestInt.ConvertStringToInt("Voulez-vous : \n" + "1- Créer un perso\n" + "2- affichez vos persos \n" + "3- Modifiez un perso\n"
-        + "4- sortir", sc1);
+        int choix;
+                do{
+                    choix = TestInt.ConvertStringToInt("Voulez-vous : \n" + "1- Créer un perso\n" + "2- affichez vos persos \n"
+                + "3- Modifiez un perso\n" + "4- sortir", sc1);
         switch (choix) {
-            case 1:
+        case 1:
             do {
 
                 newPerso.add(PersonnageFactory.createPersonnage(sc1));
-    
-                System.out.println("Voulez-vous créer un autre personnages oui:'1', non: '2'");
+
+                System.out.println("Voulez-vous créer un autre personnages oui:'11111', non: '2'");
                 userChoice = sc1.nextLine();
-    
-            } while (userChoice.equals("4"));
-                
-                break;
-                case 2:
-                
-                break;
-                case 3:
-                
-                break;
-                case 4:
-                
-                break;
-        
-            default:
-                break;
-        }
+                System.out.println("userChoice vaut " + userChoice);
+                System.out.println("condition de sortie : " + userChoice.equals("1"));
 
-       
+            } while (userChoice.equals("1"));
 
-        System.out.println("voulez vous afficher vos personnages : Y/N");
-        String displayChoice = sc1.nextLine();
-        if (displayChoice.toUpperCase().equals("Y")) {
-
-            for (int x = 0; x < newPerso.size(); x++) {
-
-                System.out.println(newPerso.get(x).toString());
-            }
-
-            // System.out.println(PersonnageFactory.afficheTableau(newPerso));
+            break;
+        case 2:
             System.out.println("Voulez-vous modifier un personnages: Y/N");
-            displayChoice = sc1.nextLine();
+            String displayChoice = sc1.nextLine();
             if (displayChoice.toUpperCase().equals("Y")) {
 
                 for (Personnage perso : newPerso) {
@@ -96,19 +75,41 @@ public class Main {
                     break;
 
                 }
-                
-
-            }
+            
             for (int x = 0; x < newPerso.size(); x++) {
 
                 System.out.println(newPerso.get(x).toString());
             }
         }
 
-        sc1.close();
+            break;
+        case 3:
 
+            for (int x = 0; x < newPerso.size(); x++) {
+
+                System.out.println(newPerso.get(x).toString());
+            }
+
+            break;
+        case 4:
+        System.out.println("aurevoir!!");
+
+            break;
+            
+        default:
+            break;
+        }
+    }while (choix!=4);
+        
+        sc1.close();
     }
 }
+
+        
+    
+
+
+// System.out.println(PersonnageFactory.afficheTableau(newPerso));
 
 // System.out.println(gPersonnage.toString());
 // System.out.println(gPersonnage.getImage());
