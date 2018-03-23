@@ -2,7 +2,7 @@ package personnages;
 
 public class Sort extends DeviceToKill {
 	private String element;
-	public static int compteur = 0;
+	private static int compteur = 0;
 
 	public String getElement()
 	{

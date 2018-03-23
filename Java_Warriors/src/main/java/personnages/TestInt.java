@@ -18,7 +18,7 @@ public class TestInt {
             try { // aucune erreur
 
                 String nombre = sc1.nextLine(); // la variable prend le chiffre saisi
-                result = Integer.parseInt(nombre);
+                result = Integer.parseInt(nombre);//tranforme en int
                 bsaisie = true; // bsaisie passe a l’état true, ce qui permettra de sortir de la boucle
 
             } catch (NumberFormatException e) { // erreur du type toutes Exception (s) (ce n’est pas un int qui est saisi)

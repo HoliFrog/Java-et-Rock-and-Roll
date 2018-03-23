@@ -8,6 +8,24 @@ public abstract class Personnage {
     private int lifeLevel;
     private int atkLevel;
     protected abstract String getTypePerso();
+    private int persoNumber;
+    private static int compteur = 0;
+
+    public Personnage(){
+        compteur++;
+        this.persoNumber=compteur;
+    }
+
+	public int getPersonumber()
+	{
+		return this.persoNumber;
+	}
+
+	public void setPersonumber(int persoNumber)
+	{
+		this.persoNumber = persoNumber;
+	}
+
 
     public void setNom(String Nom) {
         this.nom = Nom;

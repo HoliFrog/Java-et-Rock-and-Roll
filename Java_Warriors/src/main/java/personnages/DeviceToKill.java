@@ -48,8 +48,7 @@ public abstract class DeviceToKill {
 		this.deviceAtk = deviceAtk;
 	}
 	public String toString(){
-		return "Dispositif d'attaque : "+ getDevicetype()+
-		"\n"+ getDevicetype()+" n° "+getDevicenumber()+
+		return "\n"+ getDevicetype()+" n° "+getDevicenumber()+
 		"\nNom de votre "+getDevicetype()+" :  " +getDevicename()+
 		"\nNiveau d'atk :  "+getDeviceatk()+"\n";
         

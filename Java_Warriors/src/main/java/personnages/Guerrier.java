@@ -2,6 +2,7 @@ package personnages;
 import java.util.*;
 
 public class Guerrier extends Personnage {
+    private static int compteur = 0;
 
     ArrayList<Arme> myWeapons;
 
@@ -19,13 +20,15 @@ public class Guerrier extends Personnage {
 
     /** TOTO */
     public Guerrier(String nom, String image, int lifeLevel, int atkLevel, ArrayList<Arme> mesArmes) {
+        
         this.setNom(nom);
         this.setImage(image);
         this.setLifeLevel(lifeLevel);
         this.setAtkLevel(atkLevel);
         this.setMyWeapons(mesArmes);
+       
 
-    }
+        }
 
     // public void displayWarrior() {
 
@@ -33,8 +36,12 @@ public class Guerrier extends Personnage {
     // }
 
     public String toString() {
-        return "Vous avez choisi un "+ getTypePerso() +" \n"
+        return "Perso n° "+getPersonumber()+
+        "\nVous avez choisi un "+ getTypePerso() +" \n"
         + super.toString()+ "\n"
         +myWeapons.toString();
+        // + PersonnageFactory.afficheTableau(myWeapons);
     }
+
+   
 }

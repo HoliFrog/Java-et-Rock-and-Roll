@@ -28,21 +28,19 @@ public abstract class PersonnageFactory {
         }
     }
 
-    private static ArrayList<Arme> createArmes(Scanner sc1) {
+    public static ArrayList<Arme> createArmes(Scanner sc1) {
         int nbArmesChoice = 2;
         ArrayList<Arme> mesArmes = new ArrayList<Arme>();
         do {
             mesArmes.add(createArme(sc1));
 
-            System.out.println("Voulez-vous en créer une autre? 1-oui, 2-non");
-            nbArmesChoice = sc1.nextInt();
-            sc1.nextLine();
+            nbArmesChoice = TestInt.ConvertStringToInt("Voulez-vous en créer une autre? 1-oui, 2-non", sc1);
 
         } while (mesArmes.size() < 4 && nbArmesChoice == 1);
         return mesArmes;
     }
 
-    private static Arme createArme(Scanner sc1) {
+    public static Arme createArme(Scanner sc1) {
 
         String arme = "arme";
         System.out.println("Maintenant créer votre " + arme);
@@ -68,21 +66,22 @@ public abstract class PersonnageFactory {
         return new Arme(arme, nomArme, forceArme, typeOfW);
     }
 
-    private static ArrayList<Sort> createSorts(Scanner sc1) {
+    public static ArrayList<Sort> createSorts(Scanner sc1)
+
+    {
         int newSortsChoice = 2;
         ArrayList<Sort> mesSorts = new ArrayList<Sort>();
         do {
             mesSorts.add(createSort(sc1));
 
-            System.out.println("Voulez-vous en créer un autre sort? 1-oui, 2-non");
-            newSortsChoice = sc1.nextInt();
+            newSortsChoice = TestInt.ConvertStringToInt("Voulez-vous en créer un autre sort? 1-oui, 2-non", sc1);
 
         } while (mesSorts.size() < 4 && newSortsChoice == 1);
         return mesSorts;
     }
 
-    private static Sort createSort(Scanner sc1) {
-        sc1.nextLine();
+    public static Sort createSort(Scanner sc1) {
+
         String sort = "sort";
         System.out.println("Maintenant créer votre " + sort);
 
@@ -110,14 +109,17 @@ public abstract class PersonnageFactory {
         return new Sort(sort, nomSort, forceSort, assocElement);
     }
 
-    // public void armeUpdate(Scanner sc1, int index, int newValue) {
+    public static String afficheTableau(ArrayList<Personnage> objectToDisplay) {
 
-    //     for (int i = 0; i < createArmes(sc1).size(); i++) {
-    //         if (index == i) {
-    //             createArmes(sc1).set(i, newValue);
-    //         }
+        String display = "";
+        for (int x = 0; x < objectToDisplay.size(); x++) {
+            display += objectToDisplay.get(x).toString() + System.lineSeparator();
+        }
 
-    //     }
+        return display;
+    }
 
-    // }
+    // public void persoUpdate(Scanner sc1, int index, Personnage newValues) {
+
+    //             createPersonnage(sc1).setNom(index,newValues);
 }

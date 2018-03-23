@@ -2,7 +2,7 @@ package personnages;
 
 public class Arme extends DeviceToKill {
 	private String typeOfWeapon;
-	public static int compteur = 0;
+	private static int compteur = 0;
 
 	public String getTypeofweapon() {
 		return this.typeOfWeapon;
@@ -21,7 +21,7 @@ public class Arme extends DeviceToKill {
 		this.setDevicenumber(compteur);
 	}
 	public String toString(){
-		return super.toString()+ "Type d'"+getDevicetype()+" : "+getTypeofweapon();
+		return super.toString()+ "Type d'"+getDevicetype()+" : "+getTypeofweapon()+"\n";
 	}
 }
 
